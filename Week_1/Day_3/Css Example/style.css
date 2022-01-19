@@ -1,0 +1,32 @@
+* {
+  font-family: 'Courier New', Courier, monospace;
+  border: 10px solid black;
+}
+
+h1 {
+  font-size: 80px;
+  border: none;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+}
+
+/* .red-background {
+  background-color: red;
+} */
+/* .red-background {
+  background-color: #ff0000;
+} */
+.red-background {
+  background-color: rgb(255, 0, 0, 0.1);
+}
+
+.green-background {
+  background-color: green;
+}
+
+#special {
+  background-color: yellow;
+}
