@@ -84,7 +84,7 @@ const greeting = function (name) {
 //With only one expressipon (the return of the string)
 const arrowGreeting = (name) => `Hello , ${name}`;
 
-console.log(arrowGreeting('Ruben'));
+//console.log(arrowGreeting('Ruben'));
 
 /* const sayHi = () => 'Hi';
 
@@ -112,15 +112,15 @@ const newArray = myArray.map((number) => {
   return number + 10;
 });
 
-console.log(myArray);
+//console.log(myArray);
 //console.log(newArray);
 
 const silent = ['can', 'you', 'hear', 'me'];
 
 const scream = silent.map((word) => word.toUpperCase());
 
-console.log(silent);
-console.log(scream);
+//console.log(silent);
+//console.log(scream);
 
 const cities = [
   'miami',
@@ -191,7 +191,7 @@ let initialValue = 10;
 
 //console.log(reducedArray);
 
-const separateWords = ['United', 'different', 'okay', 15, 'really?', 10];
+const separateWords = ['united', 'different', 'okay', 'nope', 'really?', 'okidoki'];
 
 const unitedWord = separateWords.reduce((acc, value) => acc + value);
 
@@ -202,7 +202,7 @@ const unitedWord = separateWords.reduce((acc, value) => acc + value);
 //third iteration
 'Uni' + 't' === 'Unit';
 
-console.log(unitedWord);
+//console.log(unitedWord);
 
 // return the total amount of characters
 
@@ -214,4 +214,55 @@ let total = separateWords.reduce((acc, value) => {
   }
 }, 0);
 
-console.log(total);
+//console.log(total);
+
+//.sort() (will mutate the array)
+
+const numbers = [22, 78, 99, 68, 1, 0, 9, 9, 112, 223, 64, 18];
+
+//const words = ['Hey', 'hello', 'Ola', 'oi', 'aloha'];
+
+//console.log(words);
+
+//numbers.sort();
+//console.log(numbers);
+//default function behind the scenes
+/* function compare(a, b) {
+  if (a < b) return -1; // a is less than b
+  if (a > b) return 1; // a is greater than b
+  if (a === b) return 0; // a equals b
+} */
+// We can use this function and adapt it
+
+/* numbers.sort(function (a, b) {
+  return a - b;
+});
+ */
+//super short es6 syntax
+
+//numbers.sort((a, b) => a - b);
+
+//console.log(numbers);
+
+const words = ['Hey', 'hello', 'Ola', 'oi', 'aloha', 'Zara'];
+
+//words.sort();
+
+//console.log(words);
+
+words.sort((a, b) => {
+  if (a.toLowerCase() < b.toLowerCase()) return -1;
+  if (a.toLowerCase() > b.toLowerCase()) return 1;
+  if (a.toLowerCase() === b.toLowerCase()) return 0;
+});
+
+console.log(words);
+
+//.reverse() - Also mutates the original array
+//words.reverse();
+
+//console.log(words);
+
+//numbers.reverse();
+
+//console.log(numbers);
