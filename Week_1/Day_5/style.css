@@ -1,0 +1,43 @@
+/* Direct descendant selector
+ parent > child {
+
+ }
+
+*/
+
+.parent > .child {
+  background-color: red;
+}
+
+/* descendant selector */
+
+section p {
+  background-color: blue;
+}
+
+/* Adjacent selector
+former + target
+{
+}
+*/
+
+#former + div {
+  background-color: red;
+}
+
+/* Multiple selection*/
+
+h1,
+.child,
+p {
+  font-size: 20px;
+}
+
+/* attribute selector 
+element[attr-name='value']
+*/
+
+a[href='https://ironhack.com']
+{
+  font-size: 30px;
+}

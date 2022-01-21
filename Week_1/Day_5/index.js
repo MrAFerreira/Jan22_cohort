@@ -288,9 +288,14 @@ class Whale extends Animal {
       console.log(`I have eaten ${this.eaten.join(', ')}! Loved it! Happy Whale`);
     }
   }
+
+  makeSound() {
+    super.makeSound();
+    console.log("I'm a whale");
+  }
 }
 
 let moby = new Whale('Moby', 'White', 'Yum!');
 
-moby.showEaten();
+moby.makeSound();
 console.log(moby);
