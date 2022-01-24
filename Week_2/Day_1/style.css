@@ -1,0 +1,159 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+
+  /* Border properties */
+  /* border-width: 10px 30px;
+  border-style: solid;
+  border-color: black; */
+  border: 20px solid black;
+  /*  border-bottom: 10px solid black; */
+  /*  border-radius: 30px; */
+  /* border-top-left-radius: 50px; */
+  /*   border-radius: 50%; */
+
+  /* Padding properties */
+  padding: 20px 20px 20px 20px;
+
+  margin: 50px auto;
+  text-align: center;
+}
+
+.responsive {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+}
+
+/* @media [(media-features)] {
+  // Our styles
+} */
+
+/* @media (min-width: 1000px) {
+  .responsive {
+    background-color: blue;
+    width: 500px;
+    height: 500px;
+  }
+}
+
+@media (min-width: 650px) and (max-width: 999px) {
+  .responsive {
+    background-color: green;
+  }
+} */
+
+/* viewport units 
+vw vieport width
+vh viewport height
+vmin whichever is smallest
+vmax whichever is largest
+*/
+
+.units {
+  background-color: red;
+  width: 50vw;
+  height: 50vh;
+}
+
+/* em and rem 
+
+em - always refer to the parent's font size
+(inside a div with 10px font size)
+2em = 20px
+
+rem - refer to the html font size
+(default size for browser is 16px so: )
+2em = 32px;
+
+*/
+
+ul {
+  font-size: 10px;
+}
+
+li {
+  /* em refers to the ul font size */
+  font-size: 3.2em;
+
+  /* rem refers to the html font-size */
+  font-size: 3.2rem;
+}
+
+/* @media (max-width: 600px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+.parent {
+   width: 500px;
+  height: 500px;
+}
+
+.between {
+  width: 50%;
+  height: 50%;
+}
+
+.percent {
+  width: 50%;
+  height: 50%;
+  background-color: red;
+}  */
+
+/* img {
+  width: 75vw;
+  height: auto;
+}
+
+.hovercat {
+  width: 750px;
+  height: 500px;
+  background-image: url(https://i.kym-cdn.com/entries/icons/facebook/000/002/232/bullet_cat.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+} */
+
+.container {
+  display: flex;
+  height: 100vh;
+  /* flex-direction: column-reverse; */
+  /* flex-wrap: wrap; */
+  flex-flow: row wrap;
+  justify-content: space-around;
+  /*   align-items: flex-end; */
+  align-items: center;
+  /* align-content: center; */
+}
+
+.child {
+  font-size: 100px;
+  width: 200px;
+  height: 200px;
+  border: 10px solid black;
+  display: flex;
+  justify-content: center;
+}
+
+.item {
+  flex-grow: 1;
+  align-self: flex-start;
+  order: 2;
+}
+
+.item-two {
+  flex-grow: 2;
+  align-self: flex-end;
+  order: 1;
+}
