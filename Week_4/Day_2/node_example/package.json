@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "cat-me": "^1.0.3",
+    "chalk": "^4.0.0",
+    "pokemon": "^2.3.0"
+  }
+}
