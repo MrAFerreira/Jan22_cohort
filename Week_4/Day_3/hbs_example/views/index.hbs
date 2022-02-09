@@ -1,0 +1,48 @@
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>HBS example</title>
+  </head>
+  <body>
+
+    {{#if firstName}}
+      <h1>You're name is {{firstName}}</h1>
+    {{/if}}
+
+    {{!-- {{#if address}}
+      <p>{{address}}</p>
+    {{else}} 
+      <p>There's no valid address!</p>
+    {{/if}}--}}
+
+    {{#unless favouriteFood}}
+      <p>There's no favourite food</p>
+    {{/unless}}
+
+    <ul>
+      {{#each cities}}
+
+        {{#if @first}}
+          <li><b>{{this}}</b></li>
+
+        {{else if @last}}
+          <li><i>{{this}}</i></li>
+
+        {{else}}
+          <li> {{this}}</li>
+        {{/if}}
+
+      {{/each}}
+    </ul>
+
+    {{#with address}}
+      <p>Location: {{street}}</p>
+      <p>Number: {{number}}</p>
+    {{/with}}
+
+    <p>Welcome to the {{bootcamp}}</p>
+    <img src='https://c.tenor.com/uBcbvnuP3K0AAAAC/lil-yachty-drake.gif' />
+  </body>
+</html>
