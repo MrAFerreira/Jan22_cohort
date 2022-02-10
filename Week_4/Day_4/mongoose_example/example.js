@@ -64,14 +64,14 @@ kitty : {
     .catch((err) => console.log(err));
 } */
 
-let newCat = { name: 'Mr. Cottonz', color: 'grey', age: 8 };
+let newCat = { name: 'Mr. Meowy', color: 'white', age: 8 };
 function addCat(data) {
   Cat.create(data)
     .then((catCreated) => console.log(catCreated))
     .catch((err) => console.log(err));
 }
 
-//addCat(newCat);
+addCat(newCat);
 //find() returns an array
 /* Cat.find({ age: { $gte: 10 } }, 'name age')
   .then((catsFound) => {
@@ -80,9 +80,9 @@ function addCat(data) {
   .catch((err) => console.log(err)); */
 
 //return a single object
-Cat.findById('62050182c7d7ac44caff2972')
+/* Cat.findById('62050182c7d7ac44caff2972')
   .then((foundCat) => console.log(foundCat))
-  .catch((err) => console.log(err));
+  .catch((err) => console.log(err)); */
 
 //Update
 /* Cat.findByIdAndUpdate('62050182c7d7ac44caff2972', { color: 'grey' })
@@ -102,6 +102,6 @@ Cat.findById('62050182c7d7ac44caff2972')
   .then((cat) => console.log(cat))
   .catch((err) => console.log(err)); */
 
-Cat.countDocuments()
+/* Cat.countDocuments()
   .then((value) => console.log(`We have ${value} cats`))
-  .catch((err) => console.log(err));
+  .catch((err) => console.log(err)); */

@@ -8,7 +8,7 @@ const catSchema = new Schema({
   name: {
     type: String,
     required: true,
-    //unique: true,
+    unique: true,
   },
   color: {
     type: String,
@@ -18,6 +18,7 @@ const catSchema = new Schema({
     type: Number,
     min: 0,
     max: 30,
+    unique: true,
   },
   avatar: {
     type: String,
