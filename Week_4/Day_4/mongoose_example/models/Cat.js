@@ -1,3 +1,4 @@
+//npm i mongoose
 const mongoose = require('mongoose');
 
 //Schema

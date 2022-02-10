@@ -64,11 +64,44 @@ kitty : {
     .catch((err) => console.log(err));
 } */
 
-let newCat = { name: 'Mr. Bubbles', color: 'white', age: 33 };
+let newCat = { name: 'Mr. Cottonz', color: 'grey', age: 8 };
 function addCat(data) {
   Cat.create(data)
     .then((catCreated) => console.log(catCreated))
     .catch((err) => console.log(err));
 }
 
-addCat(newCat);
+//addCat(newCat);
+//find() returns an array
+/* Cat.find({ age: { $gte: 10 } }, 'name age')
+  .then((catsFound) => {
+    catsFound.forEach((cat) => console.log(cat.name));
+  })
+  .catch((err) => console.log(err)); */
+
+//return a single object
+Cat.findById('62050182c7d7ac44caff2972')
+  .then((foundCat) => console.log(foundCat))
+  .catch((err) => console.log(err));
+
+//Update
+/* Cat.findByIdAndUpdate('62050182c7d7ac44caff2972', { color: 'grey' })
+  .then((previousValue) => console.log(previousValue))
+  .catch((err) => console.log(err)); */
+
+/* Cat.updateMany({ age: 10 }, { age: 11 })
+  .then((updateInformation) => console.log(updateInformation))
+  .catch((err) => console.log(err)); */
+
+//Delete
+/* Cat.findByIdAndDelete('62050778473b9265d7eca810')
+  .then((deletedCat) => console.log(deletedCat))
+  .catch((err) => console.log(err)); */
+
+/* Cat.deleteOne({ name: 'Mr. Pusheen' })
+  .then((cat) => console.log(cat))
+  .catch((err) => console.log(err)); */
+
+Cat.countDocuments()
+  .then((value) => console.log(`We have ${value} cats`))
+  .catch((err) => console.log(err));
