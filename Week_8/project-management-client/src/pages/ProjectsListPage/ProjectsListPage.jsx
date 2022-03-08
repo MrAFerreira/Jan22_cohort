@@ -1,14 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import AddForm from '../../components/AddForm/AddForm';
+import { ThemeContext } from '../../context/theme.context';
 
 function ProjectsListPage() {
   const [projects, setProjects] = useState([]);
 
+  const { theme } = useContext(ThemeContext);
+
   const fetchProjects = async () => {
     try {
-      let response = await axios.get(`${process.env.REACT_APP_API_URL}/projects`);
+      const storedToken = localStorage.getItem('authToken');
+
+      let response = await axios.get(`${process.env.REACT_APP_API_URL}/projects`, {
+        headers: { Authorization: `Bearer ${storedToken}` },
+      });
       setProjects(response.data);
     } catch (error) {
       console.log(error);
@@ -20,7 +27,7 @@ function ProjectsListPage() {
   }, []);
 
   return (
-    <div>
+    <div className={'ProjectsPage ' + theme}>
       <AddForm refreshProjects={fetchProjects} />
       {projects.map((project) => {
         return (

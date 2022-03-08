@@ -8,7 +8,7 @@ function ProjectDetails() {
 
   const fetchProject = async () => {
     try {
-      let response = await axios.get(`${process.env.REACT_APP_API_URL}/projects/${projectId}`);
+      let response = await axios.get(`${process.env.REACT_APP_API_URL}/api/projects/${projectId}`);
       setProject(response.data);
     } catch (error) {
       console.log(error);
